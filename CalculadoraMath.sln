@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraMath.BL", "CalculadoraMath.BL\CalculadoraMath.BL.csproj", "{139AD1BA-0AB0-4076-A7FC-24842F1B39A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraMath.BL", "CalculadoraMath.BL\CalculadoraMath.BL.csproj", "{139AD1BA-0AB0-4076-A7FC-24842F1B39A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingAPI", "TestingAPI\TestingAPI.csproj", "{CCD365D6-F8E6-45D5-AA36-242116D45A1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingAPI", "TestingAPI\TestingAPI.csproj", "{CCD365D6-F8E6-45D5-AA36-242116D45A1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraMath.UI", "CalculadoraMath.UI\CalculadoraMath.UI.csproj", "{C6B9C0CC-E910-47BD-A93D-62EC62A2BE19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CCD365D6-F8E6-45D5-AA36-242116D45A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCD365D6-F8E6-45D5-AA36-242116D45A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCD365D6-F8E6-45D5-AA36-242116D45A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B9C0CC-E910-47BD-A93D-62EC62A2BE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B9C0CC-E910-47BD-A93D-62EC62A2BE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B9C0CC-E910-47BD-A93D-62EC62A2BE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B9C0CC-E910-47BD-A93D-62EC62A2BE19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
