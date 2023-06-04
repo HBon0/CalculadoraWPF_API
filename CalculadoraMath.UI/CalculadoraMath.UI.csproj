@@ -8,7 +8,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="buscar-alt %281%29.png" />
+    <None Remove="navegador %281%29.png" />
+    <None Remove="navegador.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CalculadoraMath.BL\CalculadoraMath.BL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="buscar-alt (1).png" />
+    <Resource Include="navegador (1).png" />
+    <Resource Include="navegador.png" />
   </ItemGroup>
 
 </Project>
