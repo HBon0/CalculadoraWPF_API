@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculadoraMath.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="568" Background="DarkSlateBlue">
-    <Grid>
+        Title="MainWindow" Height="750" Width="568">
+    <Grid Background="#FF101631">
         <Label x:Name="label" Content="CALCULADORA MATEMÁTICA" HorizontalAlignment="Left" Margin="48,54,0,0" VerticalAlignment="Top" Width="520" FontSize="32" Foreground="Aquamarine" FontWeight="Bold"/>
         <TextBox x:Name="txtExprMath" HorizontalAlignment="Left" Margin="149,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="353" Height="47" Padding="10,5,0,0">
 
@@ -24,42 +24,37 @@
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Button x:Name="btnCalcular" Content="CALCULAR" Click="btnCalcular_Click" HorizontalAlignment="Left" Margin="87,556,0,0" VerticalAlignment="Top" Height="46" Width="420">
-            <Button.Template>
-                <ControlTemplate>
-                    <Border Background="LightSeaGreen"
-                            CornerRadius="20">
-                        <TextBlock Text="CALCULAR"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="20"
-                                   FontFamily="Arial"
-                                   Foreground="AntiqueWhite">
-                        </TextBlock>
-                        
-                    </Border>
-                    
-                </ControlTemplate>
-            </Button.Template>
-
+        <Button x:Name="btnCalcular" Click="btnCalcular_Click" HorizontalAlignment="Left" Margin="87,556,0,0" VerticalAlignment="Top" Height="46" Width="420" Background="LightSeaGreen">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"></Setter>
+                    <Setter Property="Background" Value="Aqua"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Content>
+                <TextBlock Foreground="AntiqueWhite"
+                           Text="Calcular"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="25"
+                           FontWeight="ExtraBold">
+                </TextBlock>
+            </Button.Content>
         </Button>
-        <Button x:Name="btnSalir" Content="Salir" Click="btnSalir_Click" HorizontalAlignment="Left" Margin="220,661,0,0" VerticalAlignment="Top" Height="43" Width="154">
-            <Button.Template>
-                <ControlTemplate>
-                    <Border Background="Transparent"
-                            BorderBrush="White"
-                            BorderThickness="2"
-                            CornerRadius="20">
-                        <TextBlock Text="Salir"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="20"
-                                   FontFamily="Arial"
-                                   Foreground="AntiqueWhite">
-                        </TextBlock>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
+        <Button x:Name="btnSalir"  Click="btnSalir_Click" HorizontalAlignment="Left" Margin="226,644,0,0" VerticalAlignment="Top" Height="43" Width="154" Background="Transparent">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="BorderBrush" Value="White"></Setter>
+                    <Setter Property="BorderThickness" Value="4"></Setter>
+                    <Setter Property="CornerRadius" Value="20"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Content>
+                <TextBlock Text="SALIR"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="ExtraBold"></TextBlock>
+            </Button.Content>
         </Button>
         <Label x:Name="lblResult" Content="Resultado" HorizontalAlignment="Left" Margin="149,309,0,0" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
         <Label x:Name="lblExpr" Content="Expresión Matemática:" HorizontalAlignment="Left" Margin="149,207,0,0" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
