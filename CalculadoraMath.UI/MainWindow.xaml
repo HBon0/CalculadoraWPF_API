@@ -5,101 +5,112 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculadoraMath.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="680" Width="550">
-    <Window.Resources>
-        <Style TargetType="Border">
-            <Setter Property="CornerRadius" Value="30"></Setter>
-        </Style>
-    </Window.Resources>
-    <Grid Background="#FF101631" Margin="0,0,0,-6">
-        <Label x:Name="label" Content="CALCULADORA MATEMÁTICA" HorizontalAlignment="Left" Margin="37,54,0,0" VerticalAlignment="Top" Width="481" FontSize="32" Foreground="Aquamarine" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.139"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-0.522"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <TextBox x:Name="txtExprMath" HorizontalAlignment="Left" Margin="155,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336" Height="47" Padding="10,5,0,0">
-            <TextBox.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"></Setter>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <TextBox x:Name="txtResult" HorizontalAlignment="Left" Margin="155,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336" Height="142" Padding="10,5,0,0">
-            <TextBox.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"></Setter>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <TextBox x:Name="txtIcon1" HorizontalAlignment="Left" Margin="101,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="37" Height="43">
-            <TextBox.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"></Setter>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <TextBox x:Name="txtIcon2" HorizontalAlignment="Left" Margin="95,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" Height="41">
-            <TextBox.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"></Setter>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <Button x:Name="btnCalcular" Click="btnCalcular_Click" HorizontalAlignment="Center" Margin="0,482,0,0" VerticalAlignment="Top" Height="46" Width="432" Background="LightSeaGreen">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="20"></Setter>
-                    <Setter Property="Background" Value="Aqua"></Setter>
-                </Style>
-            </Button.Resources>
-            <Button.Content>
-                <TextBlock Foreground="AntiqueWhite"
+        Title="MainWindow" 
+        Height="680"
+        Width="550"
+        Background="Transparent" 
+        AllowsTransparency="True"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+
+    <Border CornerRadius="50"
+            Background="#FF101631">
+        <Grid Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="317*"/>
+                <ColumnDefinition Width="233*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="label" Content="CALCULADORA MATEMÁTICA" HorizontalAlignment="Left" Margin="37,54,0,0" VerticalAlignment="Top" Width="481" FontSize="32" Foreground="Aquamarine" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.139"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.522"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <TextBox x:Name="txtExprMath" HorizontalAlignment="Left" Margin="155,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336" Height="47" Padding="10,5,0,0" Grid.ColumnSpan="2">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="txtResult" HorizontalAlignment="Left" Margin="155,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336" Height="142" Padding="10,5,0,0" Grid.ColumnSpan="2">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="txtIcon1" HorizontalAlignment="Left" Margin="101,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="37" Height="43">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="txtIcon2" HorizontalAlignment="Left" Margin="95,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" Height="41">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button x:Name="btnCalcular" Click="btnCalcular_Click" HorizontalAlignment="Left" Margin="59,482,0,0" VerticalAlignment="Top" Height="46" Width="432" Background="LightSeaGreen" Grid.ColumnSpan="2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                        <Setter Property="Background" Value="Aqua"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Content>
+                    <TextBlock Foreground="AntiqueWhite"
                            Text="Calcular" 
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center" 
                            FontSize="25" 
                            FontWeight="Bold">
-                </TextBlock>
-            </Button.Content>
-        </Button>
-        <Button x:Name="btnSalir"  Click="btnSalir_Click" HorizontalAlignment="Left" Margin="214,570,0,0" VerticalAlignment="Top" Height="43" Width="154" Background="Transparent">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="BorderBrush" Value="White"></Setter>
-                    <Setter Property="BorderThickness" Value="4"></Setter>
-                    <Setter Property="CornerRadius" Value="20"></Setter>
-                </Style>
-            </Button.Resources>
-            <Button.Content>
-                <TextBlock Text="SALIR" 
+                    </TextBlock>
+                </Button.Content>
+            </Button>
+            <Button x:Name="btnSalir"  Click="btnSalir_Click" HorizontalAlignment="Left" Margin="214,570,0,0" VerticalAlignment="Top" Height="43" Width="154" Background="Transparent" Grid.ColumnSpan="2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="BorderBrush" Value="White"></Setter>
+                        <Setter Property="BorderThickness" Value="4"></Setter>
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Content>
+                    <TextBlock Text="SALIR" 
                            Foreground="White" 
                            FontSize="20" 
                            FontWeight="Bold">
-                </TextBlock>
-            </Button.Content>
-        </Button>
-        <Label x:Name="lblResult" Content="Resultado" HorizontalAlignment="Left" Margin="155,282,0,0" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
-        <Label x:Name="lblExpr" Content="Expresión Matemática:" HorizontalAlignment="Left" Margin="155,180,0,0" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
-        <Label x:Name="label1" Content="_______________________________________________________________________" HorizontalAlignment="Left" Margin="30,-33,0,0" VerticalAlignment="Top" FontSize="72" Foreground="White" FontFamily="Arial Black" Height="87" Width="477"/>
-        <Label x:Name="label2" Content="_______________________________________________________________________" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" FontSize="72" Foreground="White" FontFamily="Arial Black" Height="104" Width="476"/>
-        <Label x:Name="label3" Content="--------------------------- o -------------------------" HorizontalAlignment="Left" Margin="75,533,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontFamily="Arial Black" Height="49" Width="432"/>
-        <Label x:Name="label4" Content="Ingrese los datos respectivos para encontrar la solución matemática" HorizontalAlignment="Left" Margin="26,121,0,0" VerticalAlignment="Top" FontSize="15" Foreground="White" FontWeight="Bold" Width="488" Height="58" RenderTransformOrigin="0.5,0.5" >
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.316"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Image x:Name="image"  HorizontalAlignment="Left" Height="47" Margin="95,214,0,0" VerticalAlignment="Top" Width="49" Source="/buscar-alt (1).png" OpacityMask="#FFECF1F3"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="53" Margin="92,312,0,0" VerticalAlignment="Top" Width="57" Source="/navegador (1).png"/>
+                    </TextBlock>
+                </Button.Content>
+            </Button>
+            <Label x:Name="lblResult" Content="Resultado" HorizontalAlignment="Left" Margin="155,282,0,0" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
+            <Label x:Name="lblExpr" Content="Expresión Matemática:" HorizontalAlignment="Left" Margin="155,180,0,0" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
+            <Label x:Name="label1" Content="_______________________________________________________________________" HorizontalAlignment="Left" Margin="30,-33,0,0" VerticalAlignment="Top" FontSize="72" Foreground="White" FontFamily="Arial Black" Height="87" Width="477" Grid.ColumnSpan="2"/>
+            <Label x:Name="label2" Content="_______________________________________________________________________" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" FontSize="72" Foreground="White" FontFamily="Arial Black" Height="104" Width="476" Grid.ColumnSpan="2"/>
+            <Label x:Name="label3" Content="--------------------------- o -------------------------" HorizontalAlignment="Left" Margin="75,533,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" FontFamily="Arial Black" Height="49" Width="432" Grid.ColumnSpan="2"/>
+            <Label x:Name="label4" Content="Ingrese los datos respectivos para encontrar la solución matemática" HorizontalAlignment="Left" Margin="26,121,0,0" VerticalAlignment="Top" FontSize="15" Foreground="White" FontWeight="Bold" Width="488" Height="58" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" >
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.316"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Image x:Name="image"  HorizontalAlignment="Left" Height="47" Margin="95,214,0,0" VerticalAlignment="Top" Width="49" Source="/buscar-alt (1).png" OpacityMask="#FFECF1F3"/>
+            <Image x:Name="image1" HorizontalAlignment="Left" Height="53" Margin="92,312,0,0" VerticalAlignment="Top" Width="57" Source="/navegador (1).png"/>
 
-    </Grid>
+        </Grid>
+    </Border>
 </Window>
